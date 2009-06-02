@@ -1,25 +1,29 @@
 @CHARSET "ISO-8859-1";
-body { background-color: #fff; font-family: "Trebuchet MS";}
+body { background-color: #242424; font-family: "Trebuchet MS";}
+button { cursor: pointer; font-size: 10px; }
 
+div.left { float: left; }
+div.right { float: right; }
 div.fix { clear: both; }
 
-div#page { margin: 0px auto; width: 1000px; }
 
-div#header { float:left;background-color: #000; -moz-border-radius-bottomleft: 6px; -moz-border-radius-bottomright: 6px; color: #fff; width: 100%; }
+div#header { background-color: #242424; float:left; width: 100%; }
+div#header-in { color: #fff; margin:0px auto; width: 1000px; }
 div#header h1 { padding: 10px; }
 div#header h1 a { color:#fff; text-decoration:none;  }
-div#loginForm { float: right;font-size: 10px; padding: 10px; }
+div#loginForm { float: right; font-size: 10px; padding: 10px; }
 div#loginForm input { font-size: 10px; }
 div#loginForm button {font-size: 10px; }
 
-div#content { float:left; background-color: #fff; color: #000; width: 100%;}
-div#content-inner { width: 90%;}
+div#content { background-color: #fff; float:left; width: 100%;}
+div#content-in { color: #000; margin: 0px auto; width: 1000px;}
 
-div#footer { float:left; background-color: #000; color: #fff; padding: 10px; -moz-border-radius: 6px;width: 100%;}
+div#footer { float: left; width: 100%;}
+div#footer-in { color: #fff; margin: 0px auto; padding: 10px; width: 1000px;}
 div#footer a { color: #C3D9FF; font-size: 12px; }
 div#footer a:hover { color: #FFFF88; }
 
-div.resource { float: left; background: url(img/server.png) 10px 5px #fff no-repeat; border: 1px solid #ccc; margin: 5px; min-height: 150px; -moz-border-radius: 6px; width: 48.75%; }
+div.resource { float: left; background: url(img/server.png) 10px 5px #fff no-repeat; border: 1px solid #ccc; margin: 5px; min-height:80px; -moz-border-radius: 6px; width: 48.75%; }
 div.resource h2 { font-size: 14px; margin-bottom: 5px; }
 div.resource h3 { font-size: 10px; }
 div.resource p { padding: 1px 5px 1px 0px; }
@@ -30,13 +34,14 @@ div.resource-details input.active {  }
 
 div.resource-status { }
 div.resource-status h2 span { color: #356AA0; }
-div.resource-status span:hover { color: #FF7400; cursor: pointer; text-decoration: underline; background: url(img/Edit_16x16.png) right center no-repeat; padding-right: 30px; }
+div.resource-status span:hover { color: #FF7400; cursor: pointer; text-decoration: underline; background: url(img/Edit_16x16.png) right center no-repeat; height: 24px; padding-right: 30px; }
 div.resource-status-form { display: none; }
-div.resource-status-form button { font-size: 10px; }
-button.save { background: url(img/Add_16x16.png) no-repeat; border:0px; cursor: pointer; min-height:16px; }
-button.cancel { background: url(img/Delete_16x16.png) no-repeat; border:0px; cursor: pointer; min-height:16px; }
+div.resource-status-form textarea { font: 12px sans-serif; }
 
-div.resource-log { border:1px solid #eee; height: 70px; overflow: auto; margin:0px 10px; padding: 5px; }
+button.edit {margin-top: 3px;}
+button.view-log {margin-top: 3px;}
+
+div.resource-log { border:1px solid #eee; display: none; height: 70px; overflow: auto; margin:0px 10px; padding: 5px; }
 div.resource-log p { border-bottom: 1px solid #eee; font-family: monospace; font-size: 11px; padding: 3px 0px; }
 div.resource-log p span.datetime { color: #356AA0;  }
 div.resource-log p span.userid { color: #4096EE;  }

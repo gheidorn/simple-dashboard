@@ -9,7 +9,7 @@ if($_REQUEST["resourceId"] != "") {
     die('Could not connect: ' . mysql_error());
   }
   $database = mysql_select_db("$dbName", $link);
-  $sql = 'SELECT * FROM status s WHERE resource_id = "'.$_REQUEST["resourceId"].'" ORDER BY posted desc LIMIT 1, 5';
+  $sql = 'SELECT * FROM status s WHERE resource_id = "'.$_REQUEST["resourceId"].'" ORDER BY posted desc LIMIT 1, 10';
   $rs = new mysql_resultset(mysql_query($sql));
   $ctr = 0;
   while ($row = $rs->fetch()) {
